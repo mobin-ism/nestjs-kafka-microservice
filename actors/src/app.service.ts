@@ -2,7 +2,54 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!';
+  findAll() {
+    return [
+      'Tom Hanks',
+      'Leonardo DiCaprio',
+      'Robert De Niro',
+      'Meryl Streep',
+      'Denzel Washington',
+      'Brad Pitt',
+      'Angelina Jolie',
+      'Jennifer Lawrence',
+      'Will Smith',
+      'Johnny Depp',
+      'Tom Cruise',
+      'Julia Roberts',
+      'Nicole Kidman',
+      'Emma Stone',
+      'Ryan Gosling',
+      'Mark Wahlberg',
+      'Matt Damon',
+      'Charlize Theron',
+      'Scarlett Johansson',
+      'Chris Evans',
+      'Chris Hemsworth',
+      'Robert Downey Jr.',
+      'Chadwick Boseman',
+      'Gal Gadot',
+      'Margot Robbie',
+      'Keanu Reeves',
+      'Idris Elba',
+      'Sandra Bullock',
+      'Samuel L. Jackson',
+      'Bruce Willis',
+      'Harrison Ford',
+      'Sigourney Weaver',
+      'Arnold Schwarzenegger',
+      'Sylvester Stallone',
+      'Mel Gibson',
+      'Ben Affleck',
+      'Jennifer Aniston',
+      'George Clooney',
+      'Cate Blanchett',
+      'Joaquin Phoenix',
+      'Jared Leto',
+      'Viola Davis',
+      'Al Pacino',
+      'Kevin Costner',
+      'Dustin Hoffman',
+      'Jack Nicholson',
+    ];
   }
 }

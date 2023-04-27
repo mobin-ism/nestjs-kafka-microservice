@@ -1,26 +1,13 @@
 import { Module } from '@nestjs/common'
-import { ClientsModule, Transport } from '@nestjs/microservices'
 import { AppController } from './app.controller'
 import { AppService } from './app.service'
+import { ActorModule } from './modules/actor/actor.module'
+import { GenreModule } from './modules/genre/genre.module'
+import { MovieModule } from './modules/movie/movie.module'
+import { SubscriberModule } from './modules/subscriber/subscriber.module'
 
 @Module({
-    imports: [
-        ClientsModule.register([
-            {
-                name: 'GENRE-SERVICE',
-                transport: Transport.KAFKA,
-                options: {
-                    client: {
-                        clientId: 'GENRE-CLIENT',
-                        brokers: ['localhost:9092']
-                    },
-                    consumer: {
-                        groupId: 'GENRE-CONSUMER'
-                    }
-                }
-            }
-        ])
-    ],
+    imports: [GenreModule, ActorModule, SubscriberModule, MovieModule],
     controllers: [AppController],
     providers: [AppService]
 })

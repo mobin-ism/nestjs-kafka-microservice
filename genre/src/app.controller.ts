@@ -7,8 +7,8 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @MessagePattern('get-genre')
-  getGenre() {
-    const genre = this.appService.getGenre();
+  findAll() {
+    const genre = this.appService.findAll();
     return genre;
   }
 }
